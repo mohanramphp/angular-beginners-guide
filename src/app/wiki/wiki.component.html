@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h4><label for="search-box">Wikipedia Search</label></h4>
+
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" autocomplete="off" />
+
+  <ul class="search-result">
+    <li *ngFor="let data of wikiData" >
+      <a href="javascript:void(0);" (click)="openSearchResult(data.resultLink)">
+        {{data.result}}
+      </a>
+    </li>
+  </ul>
+</div>
