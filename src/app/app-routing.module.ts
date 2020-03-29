@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { UsersComponent } from "./users/users.component";
 
 const routes: Routes = [
   {
@@ -12,13 +13,17 @@ const routes: Routes = [
     component: PageNotFoundComponent
   },
   {
+    path: "users/:userId/address/:addressId",
+    component: UsersComponent
+  },
+  {
     path: "",
     redirectTo: "/wiki",
     pathMatch: "full"
   },
   {
     path: "**",
-    redirectTo: "/page-not-found",
+    redirectTo: "/page-not-found"
   }
 ];
 
