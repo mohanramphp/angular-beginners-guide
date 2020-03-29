@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { UsersComponent } from "./users/users.component";
 
+// /users/1/address/2
 const routes: Routes = [
   {
     path: "wiki",
